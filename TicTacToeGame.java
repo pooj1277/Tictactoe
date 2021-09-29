@@ -11,15 +11,17 @@ public class TicTacToeGame {
 
 	public static void main  (String[] args){
 		char[] board = createBoard();//creating empty board
-		displayBoard(board);
-		Scanner userInput = new Scanner(System.in);
-		System.out.println("Enter your placement (1-9): ");
-		int playerPos = userInput.nextInt();
-		placeSymbol(board,playerPos,"Player");
-		Random rand = new Random();
-		int computerPos = rand.nextInt(9)+1;
-		placeSymbol(board,computerPos,"Computer");
-		displayBoard(board);
+		while(true) {
+			displayBoard(board);
+			Scanner userInput = new Scanner(System.in);
+			System.out.println("Enter your placement (1-9): ");
+			int playerPos = userInput.nextInt();
+			placeSymbol(board,playerPos,"Player");
+			Random rand = new Random();
+			int computerPos = rand.nextInt(9)+1;
+			placeSymbol(board,computerPos,"Computer");
+			displayBoard(board);
+		}
 	}
 
 	//UC1: Assign empty space to board
@@ -72,9 +74,7 @@ public class TicTacToeGame {
 			break;
 		default:
 			break;
-
 		}
-
 	}
 
 	//UC3: Display board
