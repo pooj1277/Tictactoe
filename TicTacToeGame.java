@@ -77,5 +77,13 @@ public class TicTacToeGame {
 
 	}
 
-	
+	//UC3: Display board
+	public static void displayBoard(char[] board){
+		System.out.println("  0  " + board[1] + "|" + board[2] + "|" + board[3]);
+		System.out.println("    --+--+--");
+		System.out.println("  1  " + board[4] + "|" + board[5] + "|" + board[6]);
+		System.out.println("    --+--+--");
+		System.out.println("  2  " + board[7] + "|" + board[8] + "|" + board[9]);
+		System.out.println("     0 1 2 ");
+	}
 }
