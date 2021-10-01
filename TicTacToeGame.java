@@ -15,10 +15,6 @@ public class TicTacToeGame {
 	public static void main  (String[] args){
 		char[] board = createBoard();//creating empty board		
 
-		//Scanner userInput = new Scanner(System.in);
-		//char userLetter = chooseUserLetter(userInput); 
-		//char computerLetter = (userLetter == 'X')?'O':'X';
-
 		displayBoard(board);
 		while(true) {
 			Scanner userInput = new Scanner(System.in);
@@ -51,11 +47,7 @@ public class TicTacToeGame {
 		}
 	}	
 
-	/*	private static char chooseUserLetter(Scanner userInput) {
-		System.out.println("Choose your letter: ");
-		return userInput.next().toUpperCase().charAt(0);
-	}
-	 */
+	
 
 	//UC1: Assign empty space to board
 	public static char[] createBoard() {
@@ -75,35 +67,7 @@ public class TicTacToeGame {
 		System.out.println("  2  " + board[7] + "|" + board[8] + "|" + board[9]);
 		System.out.println("     0 1 2 ");
 	}
-	/*
-	public char playerAt( int r)
-	{
-		if ( isValid(r) )
-			return board[r];
-		else
-			return '@';
-	}
-
-	private boolean isValid(int r) {
-		if ( 0 <= r && r <= 2 )
-			return true;
-		else
-			return false;
-	}
-	public int numTurns()
-	{
-		return turns;
-	}
-	public void playMove( char p, int r )
-	{
-		if(turns<=9){
-			board[r]=p;
-			turns++;
-		}else {
-			System.out.println("It's a tie!");
-		}
-	}
-	 */
+	
 
 	//UC2: Determine player and its move
 	public static void placeSymbol(char[] board, int pos, String user) {
